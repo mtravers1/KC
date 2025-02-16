@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        
+        <div>
+            <div id="mobile" >
+                <div>
+                    <button class="mobilemenu-btn" onclick="toggleMenu()">Menu</button> <!-- Menu Toggle Button -->
+    
+    
+                </div>
+                <div class="mobilemenu" id="mobilemenu">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                    <button class="close-btn" onclick="toggleMenu()">Close Menu</button> <!-- Close Button inside the menu -->
+                  </div>
+                <script>
+                    // Function to toggle the menu open/close
+                    function toggleMenu() {
+                      const menu = document.getElementById('mobilemenu');
+                      menu.classList.toggle('open');
+                    }
+                  </script>
+                  <style>
+    
+                  </style>
+             
+          
+            </div>
+           
+            <div id="top">
+                <style>
+                    #top{
+                        position: fixed;
+                        width: 100%;
+                        transition: height 0.1s ease-in-out; /* Smooth shrinking */
+                        z-index: 1000;
+                        height: 100px;/* Initial height */
+
+                    }
+                </style>
+
+            <div id="header">
+                <div id="contact">
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>LinkedIn</p>
+                <p>202202202</p>
+                <p>abc@gmail.com</p>
+
+                </div>
+            </div>
+
+            <div>
+                <nav>
+               
+
+                    <div id="nav">
+                        <div id="logo">
+                            <img src="./images/keslogo.png"/>
+
+                        </div>
+
+                  
+                        <div id="menu">
+                            <a id="menu-link" href="index.html" >Home</a>
+                            <a id="menu-link" href="/aboutus.html">About Us</a>
+                            <a id="menu-link" href="#">Programs</a>
+                            <a id="menu-link" href="#">Get Involved</a>
+                            <a id="menu-link" href="#">Contact</a>
+                            <style>
+                            #menu-link {
+                                text-decoration: none;
+                                font-size: 24px;
+                                position: relative;
+                                padding-bottom: 5px;
+                                margin:10px;
+                                color:#471644!important;
+                                cursor: pointer;
+                                transition: color 0.3s ease-in-out;
+                                font-weight: bold;
+                            }
+
+                            #menu-link :hover{
+                                color:#471644!important
+                            }
+                    
+                            /* Underline Expand Effect */
+                            #menu-link ::after {
+                                content: "";
+                                position: absolute;
+                                left: 50%;
+                                bottom: 0;
+                                width: 0;
+                                height: 2px;
+                                background: #ff4b2b;
+                                transition: all 0.3s ease-in-out;
+                            }
+                    
+                           #menu-link:hover::after {
+                                width: 100%;
+                                left: 0;
+                            }
+                        </style>
+                            <button class="button" id="animatedButton"> Donate Now</button>
+
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        
+        
+
+        <script>
+            // Select the shrinking section
+            const shrinkSection = document.getElementById('top');
+        
+            // Define the initial and minimum height
+            const initialHeight = 100; // Initial height in pixels
+            const minHeight = 50;    // Minimum height in pixels
+        
+            // Add scroll event listener
+            window.addEventListener('scroll', () => {
+              // Calculate the new height based on scroll position
+              const scrollPosition = window.scrollY; // Amount of scroll in pixels
+              const newHeight = Math.max(minHeight, initialHeight - scrollPosition);
+        
+              // Apply the new height to the section
+              shrinkSection.style.height = newHeight + 'px';
+            });
+          </script>
+        
+            <!-- <div id="main">
+                <div id="main-text">
+                    <h1>K.E. Sullivan Foundation</h1>
+                    <h3>Building Hope, One Handshake at a Time</h3>
+                    <p>
+    At the K.E. Sullivan Foundation, we’re on a mission to support disabled veterans, 
+    seniors, and those in need within our community. As a non-profit organization, our heart beats with compassion, 
+    and our hands work for change—seniors with big dreams and families facing tough times.
+
+                    </p>
+
+                
+                </div>
+                
+                <div class="container">
+                 
+                        <button class="mainbutton dn">
+                            <span>Donate Now</span></button>
+                        <button class="mainbutton jm">Join the Movement</button>
+
+                
+                
+                </div>
+            </div> -->
+            <div>
+            <div class="carousel" >
+                <div class="carousel-images" style="  background-attachment: fixed; background-image: linear-gradient(180deg, rgba(16, 0, 17, 0.39) 0%, rgba(16, 0, 17, 0.85) 100%), url('images/IMG_0076.jpg');"></div>
+                <div class="carousel-images" style="background-attachment: fixed; background-image:  linear-gradient(180deg, rgba(16, 0, 17, 0.39) 0%, rgba(16, 0, 17, 0.85) 100%), url('images/IMG_0077.jpg'); opacity: 0;"></div>
+                <div class="carousel-images" style="background-attachment: fixed; background-image:linear-gradient(180deg, rgba(16, 0, 17, 0.39) 0%, rgba(16, 0, 17, 0.85) 100%), url('images/IMG_0078.jpg'); opacity: 0;"></div>
+                <div class="carousel-images" style="background-attachment: fixed; background-image:linear-gradient(180deg, rgba(16, 0, 17, 0.39) 0%, rgba(16, 0, 17, 0.85) 100%), url('images/IMG_0079.jpg'); opacity: 0;"></div>
+           
+                <div class="carousel-text">
+                  
+                   <h2>K.E. Sullivan Foundation</h2> 
+<h3>Building Hope, One Handshake at a Time</h3>
+<h4>At the K.E. Sullivan Foundation, we’re on a mission to support disabled veterans, seniors, and those in need within our community. As a non-profit organization, our heart beats with compassion, and our hands work for change—seniors with big dreams and families facing tough times.</h4>
+      
+</div>
+                <style>
+                    
+    .carousel-text {
+      /* max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 10px; */
+      opacity: 0; /* Hidden by default */
+      transform: translateX(-50px); /* Start off to the left */
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    /* Make text visible and slide into place */
+    .carousel-text.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+                </style>
+
+            
+                <div class="carousel-buttons">
+                  <button class="arrow prev">‹</button>
+                  <button class="arrow next">›</button>
+                </div>
+                <div id="ebuttons">
+                    <div class="b">
+                        <button class="b expandbutton">Donate Now</button>
+
+                    </div>
+                    <div class="a">
+                        <button class="a expandbutton">Volunteer Now</button>
+
+
+                    </div>
+                
+                
+                  </div>
+               
+             
+              </div>
+              
+          
+              <style>
+                 .expandbutton {
+      position: relative;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .expandbutton:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .expandbutton::before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transition: top 0.3s ease;
+    }
+
+    .expandbutton:hover::before {
+      top: 0;}
+              </style>
+             
+              
+            </div>
+            
+               
+            
+              <style>
+            .a{
+                background-color: #CFAA30;
+                box-shadow: 0px 12px 100px -6px rgba(255, 186, 90, 0.6);
+                transition: margin 300msease 0ms, padding 300msease 0ms, border-radius 300msease 0ms;                /* width: 200px; */
+
+            }
+            .b{
+                background-color: #471644!important;
+                border-top-left-radius: 20px;
+                box-shadow: 0px 12px 100px -6px rgba(85, 103, 127, 0.6);
+    transition: margin 300msease 0ms, padding 300msease 0ms, border-radius 300msease 0ms;
+
+                /* width: 200px; */
+
+            }
+
+            .a:hover{
+                background-color: #471644!important;
+
+            }
+            .b:hover{
+                background-color: #CFAA30;
+            }
+             #ebuttons{
+                display: flex;
+                position: absolute;
+                bottom:0px;
+                right: 0px;
+                justify-content: end;
+             }
+             .expandbutton {
+ 
+    /* position: relative;
+    bottom: 43px;
+    
+    left: 80%; */
+   
+    width: 400px;
+    /* transform: translateX(-50%); */
+    height: 90px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    transform-origin: top;
+    transition: height 0.3s ease;
+    }
+
+    .expandbutton:hover {
+      height: 80px; /* Increase height only at the top on hover */
+    }
+               
+              </style>
+
+
+
+<style>
+
+    #video{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .counter{
+        width: 30%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    flex-direction: column;
+    color: #471644!important;
+    }
+    .counter p{
+        font-size: 24px;
+        text-align: center;
+        color:#471644!important
+
+    }
+    .counter1{
+        width: 30%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    flex-direction: column;
+    color:#CFAA30
+    }
+    .counter1 p{
+        font-size: 24px;
+        text-align: center;
+        color:#CFAA30
+
+    }
+ 
+</style>
+            <div id="video">
+                <div>
+                <video width="350" controls>
+                    <source src="./images/video1.mp4" type="video/mp4">
+                    
+
+                  </video>
+                  <p style="text-align: right;">Watch a Message About What We Do</p>
+                  </div>
+
+                  <div class="counter">
+                    
+                        <div  id="counter">0</div>
+                        <p>Number of Clothing Items Distributed</p>
+
+                  </div>
+
+
+                  <div class="counter1">
+                    
+                    <div  id="counter1">0</div>
+                    <p>Number of meals sold</p>
+
+
+              </div>
+                  
+            </div>
+
+
+
+            <div id="mission">
+
+                <div>
+                    <img src="./images/ourmission.png"/>
+                    <h3>Our Mission</h3>
+                    <p>
+                        K.E. Sullivan (K.E.S) Foundation aims to change lives and transform our community by providing veteran outreach programs to assist homeless and disabled veterans, seniors, and youth with affordable housing, food, clothing, and establishment of benefits through training and mentorship.
+                    </p>
+                    
+
+
+                </div>
+                <div>
+                    <img src="./images/ourvision.png"/>
+                    <h3>Our Vision</h3>
+                    <p>
+                        K.E. Sullivan (K.E.S) Foundation aims to change lives and transform our community by providing veteran outreach programs to assist homeless and disabled veterans, seniors, and youth with affordable housing, food, clothing, and establishment of benefits through training and mentorship.
+                    </p>
+                    
+
+
+                </div>
+                <div>
+                    <img src="./images/volunteer.png"/>
+                    <h3>Volunteer Opportunities</h3>
+                    <p>
+                        K.E. Sullivan (K.E.S) Foundation aims to change lives and transform our community by providing veteran outreach programs to assist homeless and disabled veterans, seniors, and youth with affordable housing, food, clothing, and establishment of benefits through training and mentorship.
+                    </p>
+                    
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <div id="container1">
+                <div id="container1-top">
+                    <h2>Who we serve</h2>
+                    <p>Our work mainly involves assisting disabled veterans, seniors, homeless individuals, underprivileged community members, and transitioning youth. At the K.E. Sullivan Foundation, we stand united in our mission to serve those who need it most.</p>
+
+                </div>
+            </div>
+            
+            <div id="boxx">
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+               
+
+            </div>
+
+            <div id="container2">
+                <div>
+                    <img src="./images/communityimpact.png"/>
+
+                </div>
+                <div id="container2-text">
+                    <h2>Community Impact</h2>
+                    <p>
+                        Our organization is dedicated to empowering communities by providing resources, education, and support to those in need. We believe that everyone deserves access to a better life, and we work tirelessly to make that a reality. Through our programs and partnerships, we strive to create a more equitable and just society for all. Join us in our mission to make a difference!
+                    </p>
+
+                </div>
+            </div>
+
+           
+            <div id="container1">
+                <div id="container1-top">
+                    <h2>What We do</h2>
+                </div>
+            </div>
+            
+            <div id="container3-box">
+                <div id="">
+                    <p>Graceful Rebirth</p>
+                    <h3>Drug and Alcohol Program</h3>
+                    <p>To support individuals struggling with addiction, promoting sobriety and overall well-being.
+                    </p>
+                    <button>Learn More</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+                <div id="">
+                    <h3>Our Brands</h3>
+                    <p>Discover the various initiatives and programs under our umbrella, each designed to address specific needs within our community.</p>
+                    <button>More Info</button>
+
+
+                </div>
+               
+
+
+            </div>
+            <div id="vb">
+                <button class="button" id="volunteerButton">VOLUNTEER TODAY</button>
+
+
+            </div>
+
+            <div id="buildbettertomorrow">
+                <div>
+                    <h1>Build a better tomorrow</h1>
+                    <h3>Every dollar donated brings us closer to our goal. Your financial support allows us to fund essential renovations, making a tangible difference in the lives of those we serve.</h3>
+    
+
+                </div>
+              
+            </div>
+
+            <div id="container4">
+                <div>
+                    <h2>Current Projects</h2>
+                    <h3>We are in the process of restoring vacant units on the 2200 block of Druid Hill Avenue in Baltimore, Maryland. Our objective is to convert these buildings into multifunctional facilities aimed at reducing homelessness among veterans and aiding seniors in securing affordable housing. With a steadfast commitment to our community, we have set an ambitious goal to acquire 20-30 row homes within the next year.
+                    </h3>
+                </div>
+                <img src="/images/building.jpg"/>
+
+            </div>
+            <div id="container5">
+                <img src="/images/Future-Project.png"/>
+                <div>
+                    <h2>Future Projects</h2>
+                    <h3>Our vision is the formation of a utopia. Not your ordinary retirement community, but one that bridges the divide and unites people of all ages, providing disabled veterans with a sense of belonging in the world they once defended, a sanctuary for seniors to rediscover their youthful spirit, and a place for young people.   </h3>
+                </div>
+            </div>
+<div id="container6">
+    <div id="container6-text">
+        <h1 id="#CFAA30">K.E. Sullivan Foundation Impact Data
+        </h1>
+      <h2> Community Giveback Outreach</h2> 
+
+    </div>
+
+            <div id="container6-inner">
+               
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+                <div>
+                    <p>3061</p>
+                    <p id="#CFAA30">Clothing Items Distributed</p>
+                </div>
+
+
+            </div>
+        </div>
+           
+            <div id="container7">
+
+                <div id="joinemail">
+                    <h2>Join Our Email List</h2>
+                    <form>
+                        <input placeholder="Name"/>
+                        <input placeholder="Email"/>
+                        <button>Subscribe Now</button>
+
+
+                    </form>
+
+                </div>
+                <div id="audrey">
+                    <p id="quote">
+                        ""
+                    </p>
+                    <p>As you grow older, you will discover that you have two hands-one for helping yourself, the other for helping others.</p>
+                    <p>- Audrey Hepburn</p>
+                </div>
+
+            
+        </div>
+        <style>
+            #audrey{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:50px;
+
+            }
+            #quote{
+                font-size: 47px;
+                border:3px solid grey;
+                border-radius: 40px;
+                height: 36px;
+                
+                
+            }
+        </style>
+        <style>
+            #container7{
+                display: flex;
+
+            }
+            #joinemail{
+                width:50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding:50px;
+                background-color: #471644!important;
+                color: white;
+
+            }
+            #joinemail form{
+                display: flex;
+                flex-direction: column;
+                width:75%;
+                justify-content: center;
+                align-items: center;
+            }
+            #joinemail form input{
+                margin:15px;
+                height: 50px;
+                width: 100%;
+            }
+            #joinemail form button{
+                width:100%;
+                background-color: #CFAA30;
+                border:none;
+                color:white;
+                height: 50px;
+
+            }
+        </style>
+
+       
+
+
+        <div id="container8">
+            <h1>Be the change</h1>
+            <h2>Contribute</h2>
+            <p>Contribute
+                Your contribution can make a lasting impact. Join us in making a difference by supporting our initiatives.</p>
+
+                <div id="vb">
+                    <button class="button" id="volunteerButton">VOLUNTEER TODAY</button>
+    
+    
+                </div>
+
+        </div>
+        <div id="slider">
+
+            <h1>Our Partners & Sponsors</h1>
+            <div id="slider-container">
+                <div class="slider" reverse="true" style="
+                --width: 200px;
+                --height: 200px;
+                --quantity: 4;
+            ">
+                <div class="list">
+                    <div class="item" style="--position: 1"><img src="images/logos/ai.jpg" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="images/logos/dixion.png" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="images/logos/fultonbank.jpeg" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="images/logos/simms.png" alt=""></div>
+                   
+                </div>
+            </div>
+        </div>
+
+            </div>
+            <div id="sb">
+                <button id="sponsorbutton">Become a Sponsor</button>
+
+
+            </div>
+
+        </div>
+
+        <style>
+            #sb{
+                display: flex;
+
+                justify-content: center;
+                margin:20px 0px
+            }
+            #sponsorbutton{
+                border: none;
+    background: #471644!important;
+    color: #CFAA30;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+                transition: ease-in-out .2s;
+            }
+            #sponsorbutton:hover{
+                background-color: #CFAA30;
+                color:#471644!important;
+                transform: scale(1.1);
+            }
+        </style>
+        <style>
+
+            #slider-container{
+                margin: 0px 304px
+            }
+            .slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    transition: ease-in-out 1s;
+    width: 100%;
+}
+.slider .list .item img:hover{
+    width: 200px;
+    transform: scale(1.4)
+}
+
+
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+        </style>
+<footer>
+    <div>
+        <h1>Contact</h1>
+        
+        <ul>
+            <li>
+                Address:123 streetname, Baltimore, MD 20001
+            </li>
+            <li>
+               phone:2022022002
+            </li>
+            <li>
+                email: K.E.SullivanFoundation@gmail.com
+            </li>
+               <div>
+                <span>Instagram</span>
+                <span>FaceBook</span>
+                <span>Twitter</span>
+                <span>LinkedIn</span>
+                <span>TikTok</span>
+
+               </div>
+            
+        </ul>
+    </div>
+    <div>
+        <h1>Important Links</h1>
+        <ul>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h1>Important Links</h1>
+        <ul>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h1>Important Links</h1>
+        <ul>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+        </ul>
+    </div>
+</footer>
+<style>
+    footer{
+        background:#471644!important;
+        display: flex;
+        justify-content: space-around;
+    }
+    footer h1{
+        color:#CFAA30;
+    }
+    footer ul{
+
+    }
+    footer ul li{
+        text-decoration: none;
+        list-style: none;
+    }
+</style>
+
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
